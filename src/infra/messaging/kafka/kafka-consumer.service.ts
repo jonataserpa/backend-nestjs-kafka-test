@@ -10,13 +10,12 @@ export class KafkaConsumerService
     super({
       client: {
         clientId: 'notifications',
-        brokers: ['stirred-bream-9626-us1-kafka.upstash.io:9092'],
+        brokers: ['intense-lab-11284-us1-kafka.upstash.io:9092'],
         sasl: {
           mechanism: 'scram-sha-256',
           username:
-            'c3RpcnJlZC1icmVhbS05NjI2JP2jGZobUfgOvOJRt4BKE7U2ACdlOBKC3bMvgEk',
-          password:
-            'H4nly5QgkjLn2n3y2_9CLRKLdWPUw8ttXPwqBrladJfdawcBIk0PPMWLrcofbp3-i2Ynhg==',
+            'aW50ZW5zZS1sYWItMTEyODQkQCpydgVvbskP9wX7BlXKG23W5m9zOQft0hFoxoI',
+          password: 'd4cc7fdb75e34a15a0af04303e8284ad',
         },
         ssl: true,
       },

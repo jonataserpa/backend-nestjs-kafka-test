@@ -16,10 +16,12 @@ export class NotificationsController {
   async handleSendNotification(
     @Payload() { content, category, recipientId }: SendNotificationPayload,
   ) {
+    console.log(content);
     await this.sendNotification.execute({
       content,
       category,
       recipientId,
     });
   }
+
 }

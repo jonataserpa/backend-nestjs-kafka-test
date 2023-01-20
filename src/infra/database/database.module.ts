@@ -3,8 +3,10 @@ import { NotificationsRepository } from '@application/repositories/notifications
 import { PrismaNotificationsRepository } from '@infra/database/prisma/repositories/prisma-notifications-repository';
 
 import { PrismaService } from './prisma/prisma.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
+  imports: [ConfigModule.forRoot({ isGlobal: true })],
   providers: [
     PrismaService,
     {

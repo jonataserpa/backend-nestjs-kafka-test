@@ -9,9 +9,9 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
-  const kafkaConsumerService = app.get(KafkaConsumerService);
+  const kafkaConsumerService = await app.get(KafkaConsumerService);
 
-  app.connectMicroservice<MicroserviceOptions>({
+  await app.connectMicroservice<MicroserviceOptions>({
     strategy: kafkaConsumerService,
   });
 
